@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantsOnRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="<% controller.controller_name %>">
+    <div id="banner" class="header">
+      <h1 class="header">Plants on Rails</h1>
+    </div>
+
+    <div id="columns">
+      <div id="side">
+        <ul>
+          <li><%=link_to "Home", "/shopper" %></li>
+        </ul>
+        <div id="cart">
+          <%= render @cart %>
+        </div>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

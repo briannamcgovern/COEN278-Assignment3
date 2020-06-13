@@ -1,0 +1,27 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<div class="shopper">
+<h3>Plants Catalog</h3>
+
+<table class="list">
+ <tbody>
+    <% @plants.each do |plant| %>
+      <tr>
+        <td rowspan="3"><img src=<%= plant.image %> class="plant-img"></td>
+        <td class="info" id="name"><%= plant.name %></td>
+        <td class="info" id="price"><%= number_to_currency(plant.price) %></td>
+        <td class="info" id="size"><%= plant.size %></td>
+      </tr>
+      <tr>
+        <td colspan="3" id="descript"><%= plant.description %></td>
+      </tr>
+      <tr>
+        <td><%= button_to 'Add to Cart', line_items_path(plant_id: plant), remote: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>

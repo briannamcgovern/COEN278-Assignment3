@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap');
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  width: inherit;
+  min-height: inherit;
+  margin: 5px;
+  padding: 0;
+}  
+
+#banner {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #00ab92;
+  border-style: none none solid;
+  border-color: #C6E7CE;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+
+}
+
+
+#notice {
+    color: #000 !important;
+    border: 2px solid red;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #f0f0f0;
+    font: bold smaller sans-serif;
+}
+
+#columns {
+    background: #C6E7CE;
+
+    #main {
+        margin-left: 17em;
+        padding: 1em;
+        background: white;
+    }
+
+    #side {
+        float: left;
+        padding: 1em 2em;
+        width: 13em;
+        background: #C6E7CE;
+
+            ul {
+                padding: 0;
+                li {
+                    list-style: none;
+                    a {
+                        color: #005f49;
+                        font-size: small;
+                        text-decoration: none;
+                    }
+                    a:hover {
+                      text-color: #00a7ab;
+                    }
+
+                }
+            }
+        }
+    }
+
+h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #005f49;
+}
+
+table {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.nav {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+div.nav {
+  width: 100%;
+}
+
+.plant-img {
+  border: 1px solid #C6E7CE;
+  padding: 5px;
+  width: 200px;
+  height: auto;
+}
+
+
+
+    table tr td {
+      padding: 5px;
+      color: #005f49;
+      font-size: 11px;
+    }
+
+td.info {
+  width: 33%;
+}
+
+
+#name {
+  font-size: 15px;
+}
+
+#price {
+  font-size: 11px;
+}
+
+#size {
+   font-size: 11px;
+}
+
+#descript {
+  font-size: 11px;
+}
+
+
+
+/* plants#show */
+.plant-img-detail {
+  width: 50%;
+  height: auto;
+}
+
+.show-plant {
+  border: 1px solid #C6E7CE;
+  padding: 5px;
+}
+
